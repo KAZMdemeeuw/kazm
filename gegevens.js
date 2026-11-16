@@ -31,7 +31,7 @@ window.KAZM = {
     inschrijvingen: "Inschrijvingen starten in 2027.",
     email:          "info [at] zweefkamp.be",   // contactadres voor het kamp, met [at] i.p.v. @ (leeg = niet getoond)
     // De knop onder "Inschrijven" in de kampsectie:
-    knopTekst: "Hou me op de hoogte →",   // bv. "Schrijf je in →" of "Op de wachtlijst →"
+    knopTekst: "Wil je meer info? →",   // bv. "Schrijf je in →" of "Op de wachtlijst →"
     knopLink:  ""                          // leeg = naar het contactformulier,
                                            // of een volledige link, bv. naar een Google Form
   },
@@ -64,8 +64,7 @@ window.KAZM = {
   // Algemeen formulier (lid worden, initiatievlucht, andere vragen) → secretariaat
   formulier: "",   // nog geen sleutel van het secretariaat: het formulier toont dan een melding
 
-  // Kampformulier (pop-upvenster + keuze "Zweefkamp" in het algemene formulier)
-  // → info@zweefkamp.be. Leeg = de kampknop springt naar het algemene formulier.
+  // Kampvragen: keuze "Zweefkamp" in het formulier (ook via de kampknop) → info@zweefkamp.be
   formulierKamp: "92e90fb6-5e7d-4cae-9023-a10172df19cd",
 
   // ---- Vliegkalender --------------------------------------------------
