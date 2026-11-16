@@ -38,7 +38,7 @@ window.KAZM = {
   // verschijnt het echte, klikbare adres. Gebruik een clubadres, geen privéadres.
   // Telefoon: is wél voor iedereen leesbaar. Gebruik geen privénummer.
   contact: {
-    email:    "",                 // bv. "info [at] kazm.be"  (leeg = [E-MAIL])
+    email:    "info [at] kazm.be",                 // bv. "info [at] kazm.be"  (leeg = [E-MAIL])
     telefoon: ""                  // leeg = [TELEFOON]
   },
 
