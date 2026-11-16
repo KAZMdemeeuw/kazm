@@ -372,8 +372,8 @@ html{scroll-behavior:smooth}
 <dl style="margin: 0; display: grid; grid-template-columns: 120px 1fr; gap: 12px 16px; font-size: 16px">
 <dt style="color: #4A5966">Vliegveld</dt><dd style="margin: 0">Oostmalle-Zoersel (EBZR)</dd>
 <dt style="color: #4A5966">Adres</dt><dd style="margin: 0; display: flex; flex-direction: column; gap: 4px"><span>Heihuizen z/n, 2390 Oostmalle (Malle)</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Vliegveld+Malle+Heihuizen+2390+Oostmalle" target="_blank" rel="noopener" style="font-weight: 600; padding: 6px 0">Route plannen →</a></dd>
-<dt style="color: #4A5966">E-mail</dt><dd style="margin: 0"><span data-veld="contact.email" data-soort="email">[E-MAIL]</span></dd>
-<dt style="color: #4A5966">Telefoon</dt><dd style="margin: 0"><span data-veld="contact.telefoon" data-soort="telefoon">[TELEFOON]</span></dd>
+<dt hidden style="color: #4A5966">E-mail</dt><dd hidden style="margin: 0"><span data-veld="contact.email" data-soort="email"></span></dd>
+<dt hidden style="color: #4A5966">Telefoon</dt><dd hidden style="margin: 0"><span data-veld="contact.telefoon" data-soort="telefoon"></span></dd>
 </dl>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="https://www.facebook.com/zweefclubmeeuw" style="border: 1px solid #1B1F4B; padding: 12px 18px; border-radius: 6px; text-decoration: none; font-weight: 500">Facebook</a>
@@ -430,6 +430,7 @@ document.querySelectorAll('[data-veld]').forEach(function(el){
  if(s==='email'){var adr=v.replace(/\s*\[\s*at\s*\]\s*/gi,'@').replace(/\s*\[\s*(dot|punt)\s*\]\s*/gi,'.').trim();if(adr.indexOf('@')<1)return;el.textContent='';var btn=document.createElement('button');btn.type='button';btn.textContent='Toon e-mailadres';btn.setAttribute('style','font: inherit; font-weight: 600; color: #2B3080; background: none; border: 1px solid #C3C8D6; border-radius: 6px; padding: 10px 14px; cursor: pointer');btn.addEventListener('click',function(){var a=document.createElement('a');a.href='mailto:'+adr;a.textContent=adr;a.style.fontWeight='600';el.replaceChild(a,btn);a.focus();});el.appendChild(btn);}
  else if(s==='telefoon'&&/[0-9]/.test(v)){el.textContent='';var t=document.createElement('a');t.href='tel:'+v.replace(/[^0-9+]/g,'');t.textContent=v;el.appendChild(t);}
  else el.textContent=v;
+ if(s){var dd=el.closest('dd');if(dd&&el.textContent){dd.hidden=false;var dt=dd.previousElementSibling;if(dt&&dt.tagName==='DT')dt.hidden=false;}}
 });
 var kk=document.querySelector('[data-knop="kamp"]');if(kk&&G.kamp){var kt=(G.kamp.knopTekst||'').trim(),kl=(G.kamp.knopLink||'').trim();if(kt)kk.textContent=kt;if(/^https:\/\//.test(kl)){kk.href=kl;kk.target='_blank';kk.rel='noopener';}}
 var tb=document.querySelector('[data-lijst="kalender"]');
