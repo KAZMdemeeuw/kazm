@@ -58,14 +58,14 @@ window.KAZM = {
   //   dan staat er geen e-mailadres in de site), of
   // - een e-mailadres (werkt via FormSubmit, maar is zichtbaar voor bots), of
   // - leeg laten: dan gaat het naar het huidige adres.
-  formulier: "",
+  formulier: "https://formspree.io/f/myewelvb",
 
   // ---- Kampformulier --------------------------------------------------
   // Een tweede Formspree-link, met info@zweefkamp.be als ontvanger.
   // Ingevuld: de kampknop opent een venster met een kort kampformulier, en
   // de keuze "Zweefkamp" in het algemene formulier gaat ook naar deze link.
   // Leeg: de kampknop springt naar het algemene formulier (met "Zweefkamp" gekozen).
-  formulierKamp: "",
+  formulierKamp: "https://formspree.io/f/mdegeyve",
 
   // ---- Vliegkalender --------------------------------------------------
   // Eén regel per activiteit. Kopieer een regel om er een toe te voegen,
