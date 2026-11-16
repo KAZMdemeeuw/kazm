@@ -464,7 +464,7 @@ function richt(form,b,onderwerp){
  form.querySelectorAll('[data-extra]').forEach(function(x){x.remove();});
  function add(n,v){var i=document.createElement('input');i.type='hidden';i.name=n;i.value=v;i.setAttribute('data-extra','');form.appendChild(i);}
  if(su)su.value=onderwerp;
- if(b.svc==='w3'){form.action='https://api.web3forms.com/submit';if(su)su.name='subject';if(hp){hp.name='botcheck';hp.disabled=!hp.value;}add('access_key',b.key);add('from_name','KAZM-website');var em=form.querySelector('[name="email"]');if(em&&em.value)add('replyto',em.value);}
+ if(b.svc==='w3'){form.action='https://api.web3forms.com/submit';if(su)su.name='subject';if(hp){hp.name='botcheck';hp.disabled=!hp.value;}add('access_key',b.key);add('from_name','Zweefclub Meeuw (KAZM)');var em=form.querySelector('[name="email"]');if(em&&em.value)add('replyto',em.value);}
  else{form.action=b.url;if(su)su.name='_subject';if(hp){hp.name='_gotcha';hp.disabled=false;}}
 }
 var f=document.getElementById('infoform'),kf=document.getElementById('kampform'),kv=document.getElementById('kampvenster');
