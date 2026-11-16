@@ -60,6 +60,13 @@ window.KAZM = {
   // - leeg laten: dan gaat het naar het huidige adres.
   formulier: "",
 
+  // ---- Kampformulier --------------------------------------------------
+  // Een tweede Formspree-link, met info@zweefkamp.be als ontvanger.
+  // Ingevuld: de kampknop opent een venster met een kort kampformulier, en
+  // de keuze "Zweefkamp" in het algemene formulier gaat ook naar deze link.
+  // Leeg: de kampknop springt naar het algemene formulier (met "Zweefkamp" gekozen).
+  formulierKamp: "",
+
   // ---- Vliegkalender --------------------------------------------------
   // Eén regel per activiteit. Kopieer een regel om er een toe te voegen,
   // verwijder een regel om ze weg te halen.
