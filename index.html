@@ -281,7 +281,7 @@ html{scroll-behavior:smooth}
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #33424F">De plaatsen zijn beperkt: per lestoestel ongeveer 6 leerlingen. Ben je jonger dan 18, dan tekent een ouder of voogd mee. Elke deelnemer ondertekent het kampreglement.</p>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #33424F">Ook leden die al vliegen zijn welkom tijdens de kampweken.</p>
 <p style="margin: 0; font-size: 15px; color: #4A5966"><span data-veld="kamp.inschrijvingen">Inschrijvingen starten in 2027.</span></p>
-<a href="#contact" style="align-self: flex-start; margin-top: 4px; text-decoration: none; background: #2B3080; color: #FFFFFF; padding: 14px 22px; border-radius: 6px; font-weight: 600">Hou me op de hoogte →</a>
+<a href="#contact" data-knop="kamp" style="align-self: flex-start; margin-top: 4px; text-decoration: none; background: #2B3080; color: #FFFFFF; padding: 14px 22px; border-radius: 6px; font-weight: 600">Hou me op de hoogte →</a>
 </div>
 </div>
 </div>
@@ -431,6 +431,7 @@ document.querySelectorAll('[data-veld]').forEach(function(el){
  else if(s==='telefoon'&&/[0-9]/.test(v)){el.textContent='';var t=document.createElement('a');t.href='tel:'+v.replace(/[^0-9+]/g,'');t.textContent=v;el.appendChild(t);}
  else el.textContent=v;
 });
+var kk=document.querySelector('[data-knop="kamp"]');if(kk&&G.kamp){var kt=(G.kamp.knopTekst||'').trim(),kl=(G.kamp.knopLink||'').trim();if(kt)kk.textContent=kt;if(/^https:\/\//.test(kl)){kk.href=kl;kk.target='_blank';kk.rel='noopener';}}
 var tb=document.querySelector('[data-lijst="kalender"]');
 if(tb&&Array.isArray(G.kalender)&&G.kalender.length){tb.textContent='';G.kalender.forEach(function(r,i){var tr=document.createElement('tr');if(r&&r.kampweek){r={wanneer:get('kamp.week'+r.kampweek),activiteit:'Zweefkamp – week '+r.kampweek};}[r.wanneer,r.activiteit].forEach(function(t,j){var td=document.createElement('td');td.textContent=t==null?'':t;td.style.padding='16px 20px';if(i<G.kalender.length-1)td.style.borderBottom='1px solid #ECEEEA';if(j===0)td.style.width='42%';tr.appendChild(td);});tb.appendChild(tr);});}
 var f=document.getElementById('infoform'); if(f){

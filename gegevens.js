@@ -28,7 +28,11 @@ window.KAZM = {
   kamp: {
     week1:          "12 t.e.m. 16 juli 2027",   // verschijnt ook in de kalender
     week2:          "19 t.e.m. 23 juli 2027",   // verschijnt ook in de kalender
-    inschrijvingen: "Inschrijvingen starten in 2027."
+    inschrijvingen: "Inschrijvingen starten in 2027.",
+    // De knop onder "Inschrijven" in de kampsectie:
+    knopTekst: "Hou me op de hoogte →",   // bv. "Schrijf je in →" of "Op de wachtlijst →"
+    knopLink:  ""                          // leeg = naar het contactformulier,
+                                           // of een volledige link, bv. naar een Google Form
   },
 
   // ---- Contactgegevens op de pagina ------------------------------------
