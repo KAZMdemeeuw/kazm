@@ -439,7 +439,7 @@ var tb=document.querySelector('[data-lijst="kalender"]');
 if(tb&&Array.isArray(G.kalender)&&G.kalender.length){tb.textContent='';G.kalender.forEach(function(r,i){var tr=document.createElement('tr');if(r&&r.kampweek){r={wanneer:get('kamp.week'+r.kampweek),activiteit:'Zweefkamp – week '+r.kampweek};}[r.wanneer,r.activiteit].forEach(function(t,j){var td=document.createElement('td');td.textContent=t==null?'':t;td.style.padding='16px 20px';if(i<G.kalender.length-1)td.style.borderBottom='1px solid #ECEEEA';if(j===0)td.style.width='42%';tr.appendChild(td);});tb.appendChild(tr);});}
 var f=document.getElementById('infoform'); if(f){
  var d=(G.formulier||'').trim();
- if(/^https:\/\//.test(d)) f.action=d;
+ if(/^https:\/\//.test(d)){f.action=d;if(/formspree\.io/.test(d)){['_template','_captcha','_next'].forEach(function(n){var x=f.querySelector('[name="'+n+'"]');if(x)x.remove();});var hp=f.querySelector('[name="_honey"]');if(hp)hp.name='_gotcha';}}
  else if(d.indexOf('@')>0) f.action='https://formsubmit.co/'+d;
  else f.action='https://formsubmit.co/'+['janbart','vanerck'].join('')+'@'+['gmail','com'].join('.');
 }
