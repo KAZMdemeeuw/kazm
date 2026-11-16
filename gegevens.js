@@ -46,6 +46,12 @@ window.KAZM = {
     telefoon: ""                  // leeg = regel "Telefoon" wordt niet getoond
   },
 
+  // ---- Infobrochure ---------------------------------------------------
+  // Leeg = de knop "Infobrochure (PDF)" wordt niet getoond.
+  // Om hem te tonen: vul de link naar de PDF in, bv.
+  // "img/infobrochure.pdf" (PDF in de map img op GitHub) of een volledige link.
+  brochure: "",
+
   // ---- Waar het infoformulier naartoe gaat ----------------------------
   // - Een Formspree-link, bv. "https://formspree.io/f/abcd1234" (aanbevolen:
   //   dan staat er geen e-mailadres in de site), of

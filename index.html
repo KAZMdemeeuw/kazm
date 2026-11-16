@@ -378,7 +378,7 @@ html{scroll-behavior:smooth}
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="https://www.facebook.com/zweefclubmeeuw" style="border: 1px solid #1B1F4B; padding: 12px 18px; border-radius: 6px; text-decoration: none; font-weight: 500">Facebook</a>
 <a href="https://www.instagram.com/kazm_zweefvliegclub/" style="border: 1px solid #1B1F4B; padding: 12px 18px; border-radius: 6px; text-decoration: none; font-weight: 500">Instagram</a>
-<a href="#infobrochure" style="border: 1px solid #1B1F4B; padding: 12px 18px; border-radius: 6px; text-decoration: none; font-weight: 500">Infobrochure (PDF)</a>
+<a href="#" data-link="brochure" hidden target="_blank" rel="noopener" style="border: 1px solid #1B1F4B; padding: 12px 18px; border-radius: 6px; text-decoration: none; font-weight: 500">Infobrochure (PDF)</a>
 </div>
 </div>
 <form id="infoform" method="POST" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; border: 1px solid #D9DDD6; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
@@ -433,6 +433,7 @@ document.querySelectorAll('[data-veld]').forEach(function(el){
  if(s){var dd=el.closest('dd');if(dd&&el.textContent){dd.hidden=false;var dt=dd.previousElementSibling;if(dt&&dt.tagName==='DT')dt.hidden=false;}}
 });
 var kk=document.querySelector('[data-knop="kamp"]');if(kk&&G.kamp){var kt=(G.kamp.knopTekst||'').trim(),kl=(G.kamp.knopLink||'').trim();if(kt)kk.textContent=kt;if(/^https:\/\//.test(kl)){kk.href=kl;kk.target='_blank';kk.rel='noopener';}}
+var br=document.querySelector('[data-link="brochure"]');var bl=(G.brochure||'').trim();if(br&&bl){br.href=bl;br.hidden=false;}
 var tb=document.querySelector('[data-lijst="kalender"]');
 if(tb&&Array.isArray(G.kalender)&&G.kalender.length){tb.textContent='';G.kalender.forEach(function(r,i){var tr=document.createElement('tr');if(r&&r.kampweek){r={wanneer:get('kamp.week'+r.kampweek),activiteit:'Zweefkamp – week '+r.kampweek};}[r.wanneer,r.activiteit].forEach(function(t,j){var td=document.createElement('td');td.textContent=t==null?'':t;td.style.padding='16px 20px';if(i<G.kalender.length-1)td.style.borderBottom='1px solid #ECEEEA';if(j===0)td.style.width='42%';tr.appendChild(td);});tb.appendChild(tr);});}
 var f=document.getElementById('infoform'); if(f){
