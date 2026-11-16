@@ -281,6 +281,7 @@ html{scroll-behavior:smooth}
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #33424F">De plaatsen zijn beperkt: per lestoestel ongeveer 6 leerlingen. Ben je jonger dan 18, dan tekent een ouder of voogd mee. Elke deelnemer ondertekent het kampreglement.</p>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #33424F">Ook leden die al vliegen zijn welkom tijdens de kampweken.</p>
 <p style="margin: 0; font-size: 15px; color: #4A5966"><span data-veld="kamp.inschrijvingen">Inschrijvingen starten in 2027.</span></p>
+<p data-rij hidden style="margin: 0; font-size: 15px; color: #33424F; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px">Vragen over het kamp? <span data-veld="kamp.email" data-soort="email"></span></p>
 <a href="#contact" data-knop="kamp" style="align-self: flex-start; margin-top: 4px; text-decoration: none; background: #2B3080; color: #FFFFFF; padding: 14px 22px; border-radius: 6px; font-weight: 600">Hou me op de hoogte →</a>
 </div>
 </div>
@@ -430,7 +431,7 @@ document.querySelectorAll('[data-veld]').forEach(function(el){
  if(s==='email'){var adr=v.replace(/\s*\[\s*at\s*\]\s*/gi,'@').replace(/\s*\[\s*(dot|punt)\s*\]\s*/gi,'.').trim();if(adr.indexOf('@')<1)return;el.textContent='';var btn=document.createElement('button');btn.type='button';btn.textContent='Toon e-mailadres';btn.setAttribute('style','font: inherit; font-weight: 600; color: #2B3080; background: none; border: 1px solid #C3C8D6; border-radius: 6px; padding: 10px 14px; cursor: pointer');btn.addEventListener('click',function(){var a=document.createElement('a');a.href='mailto:'+adr;a.textContent=adr;a.style.fontWeight='600';el.replaceChild(a,btn);a.focus();});el.appendChild(btn);}
  else if(s==='telefoon'&&/[0-9]/.test(v)){el.textContent='';var t=document.createElement('a');t.href='tel:'+v.replace(/[^0-9+]/g,'');t.textContent=v;el.appendChild(t);}
  else el.textContent=v;
- if(s){var dd=el.closest('dd');if(dd&&el.textContent){dd.hidden=false;var dt=dd.previousElementSibling;if(dt&&dt.tagName==='DT')dt.hidden=false;}}
+ if(s&&el.textContent){var rij=el.closest('[data-rij]');if(rij)rij.hidden=false;var dd=el.closest('dd');if(dd){dd.hidden=false;var dt=dd.previousElementSibling;if(dt&&dt.tagName==='DT')dt.hidden=false;}}
 });
 var kk=document.querySelector('[data-knop="kamp"]');if(kk&&G.kamp){var kt=(G.kamp.knopTekst||'').trim(),kl=(G.kamp.knopLink||'').trim();if(kt)kk.textContent=kt;if(/^https:\/\//.test(kl)){kk.href=kl;kk.target='_blank';kk.rel='noopener';}}
 var br=document.querySelector('[data-link="brochure"]');var bl=(G.brochure||'').trim();if(br&&bl){br.href=bl;br.hidden=false;}
