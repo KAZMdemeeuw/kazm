@@ -53,18 +53,19 @@ window.KAZM = {
   // "img/infobrochure.pdf" (PDF in de map img op GitHub) of een volledige link.
   brochure: "",
 
-  // ---- Waar het infoformulier naartoe gaat ----------------------------
-  // - Een Formspree-link, bv. "https://formspree.io/f/abcd1234" (aanbevolen:
-  //   dan staat er geen e-mailadres in de site), of
-  // - een e-mailadres (werkt via FormSubmit, maar is zichtbaar voor bots), of
-  // - leeg laten: dan gaat het naar het huidige adres.
+  // ---- Formulieren ---------------------------------------------------
+  // Vul per formulier een Web3Forms-sleutel in (aanbevolen), bv.
+  //   "1a2b3c4d-1234-5678-9abc-1a2b3c4d5e6f"
+  // Zo'n sleutel vraag je gratis aan op web3forms.com: vul daar het adres in
+  // dat de berichten moet krijgen, en de sleutel wordt naar dat adres gemaild.
+  // Een Formspree-link ("https://formspree.io/f/…") werkt ook.
+  // Leeg = het formulier verstuurt niets en toont een melding.
+
+  // Algemeen formulier (lid worden, initiatievlucht, andere vragen) → secretariaat
   formulier: "https://formspree.io/f/myewelvb",
 
-  // ---- Kampformulier --------------------------------------------------
-  // Een tweede Formspree-link, met info@zweefkamp.be als ontvanger.
-  // Ingevuld: de kampknop opent een venster met een kort kampformulier, en
-  // de keuze "Zweefkamp" in het algemene formulier gaat ook naar deze link.
-  // Leeg: de kampknop springt naar het algemene formulier (met "Zweefkamp" gekozen).
+  // Kampformulier (pop-upvenster + keuze "Zweefkamp" in het algemene formulier)
+  // → info@zweefkamp.be. Leeg = de kampknop springt naar het algemene formulier.
   formulierKamp: "https://formspree.io/f/mdegeyve",
 
   // ---- Vliegkalender --------------------------------------------------
