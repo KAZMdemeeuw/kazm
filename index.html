@@ -385,6 +385,7 @@ dialog::backdrop{background:rgba(27,31,75,0.55)}
 </div>
 <form id="infoform" method="POST" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; border: 1px solid #D9DDD6; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
 <h3 style="margin: 0; font-size: 22px">Lid worden of meer info</h3>
+<div id="algemeen-niet-actief" role="note" hidden style="padding: 14px 16px; background: #E6E8F1; color: #1B1F4B; border-radius: 8px; font-size: 15px; line-height: 1.5">Dit formulier is voor algemene vragen nog niet actief. Mail je vraag naar het secretariaat via de knop <strong>Toon e-mailadres</strong> bij "Kom langs".<span data-kamp-ok hidden> Voor het <strong>zweefkamp</strong> kun je dit formulier wel al gebruiken: kies hieronder "Zweefkamp".</span></div>
 <p id="bedankt" hidden style="margin: 0; padding: 14px 16px; background: #E6F2E8; color: #1E4D2B; border-radius: 6px; font-size: 15px; font-weight: 500">Bedankt! Je vraag is verstuurd. We nemen zo snel mogelijk contact op.</p>
 <input type="hidden" data-onderwerp name="_subject" value="Infovraag via KAZM-website">
 <input type="text" data-honing name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none">
@@ -392,7 +393,7 @@ dialog::backdrop{background:rgba(27,31,75,0.55)}
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">Naam<input name="Naam" required autocomplete="name" type="text" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #A9B3BB; border-radius: 6px"></label>
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">E-mail<input name="email" required autocomplete="email" type="email" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #A9B3BB; border-radius: 6px"></label>
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">Opmerking<textarea name="Opmerking" rows="3" style="font: inherit; font-weight: 400; padding: 12px; border: 1px solid #A9B3BB; border-radius: 6px"></textarea></label>
-<p id="geen-formulier" role="alert" hidden style="margin: 0; padding: 12px 14px; background: #FFF4D6; color: #5A4300; border-radius: 6px; font-size: 14px">Het formulier is tijdelijk niet beschikbaar. Mail ons via de knop bij E-mail.</p>
+<p id="geen-formulier" role="alert" hidden style="margin: 0; padding: 12px 14px; background: #FFF4D6; color: #5A4300; border-radius: 6px; font-size: 14px">Dit formulier is voor deze vraag nog niet actief. Mail ons via de knop <strong>Toon e-mailadres</strong> bij "Kom langs".</p>
 <p id="te-snel" role="alert" hidden style="margin: 0; padding: 12px 14px; background: #FFF4D6; color: #5A4300; border-radius: 6px; font-size: 14px">Dat ging wel erg snel. Kijk je gegevens even na en klik dan opnieuw op versturen.</p>
 <p style="margin: 0; font-size: 13px; color: #4A5966">We gebruiken je gegevens alleen om je vraag te beantwoorden.</p>
 <button type="submit" style="font: inherit; font-weight: 600; background: #2B3080; color: #FFFFFF; border: 0; border-radius: 6px; padding: 14px; cursor: pointer">Verstuur aanvraag</button>
@@ -469,6 +470,7 @@ function richt(form,b,onderwerp){
 }
 var f=document.getElementById('infoform'),kf=document.getElementById('kampform'),kv=document.getElementById('kampvenster');
 var bA=bestemming(G.formulier),bK=bestemming(G.formulierKamp),kOk=!!bK;
+if(!bA){var na=document.getElementById('algemeen-niet-actief');if(na){na.hidden=false;var ko=na.querySelector('[data-kamp-ok]');if(ko&&bK)ko.hidden=false;}}
 if(f)f.addEventListener('submit',function(e){var s=f.querySelector('[name="Interesse"]'),kamp=!!(s&&s.value==='Zweefkamp'),b=(kamp&&bK)?bK:bA;
  if(!b){e.preventDefault();var m=document.getElementById('geen-formulier');if(m)m.hidden=false;return;}
  richt(f,b,(kamp?'Zweefkamp':(s?s.value:'Infovraag'))+' via KAZM-website');});

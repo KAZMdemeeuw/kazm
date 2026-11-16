@@ -62,7 +62,7 @@ window.KAZM = {
   // Leeg = het formulier verstuurt niets en toont een melding.
 
   // Algemeen formulier (lid worden, initiatievlucht, andere vragen) → secretariaat
-  formulier: "https://formspree.io/f/myewelvb",
+  formulier: "",   // nog geen sleutel van het secretariaat: het formulier toont dan een melding
 
   // Kampformulier (pop-upvenster + keuze "Zweefkamp" in het algemene formulier)
   // → info@zweefkamp.be. Leeg = de kampknop springt naar het algemene formulier.
