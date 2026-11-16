@@ -465,7 +465,7 @@ var f=document.getElementById('infoform'); if(f){
 }
 var kf=document.getElementById('kampform'),kv=document.getElementById('kampvenster'),kd=(G.formulierKamp||'').trim(),kOk=/^https:\/\//.test(kd);
 if(kf&&kOk)kf.action=kd;
-if(f){var hoofd=f.action;f.addEventListener('submit',function(){var s=f.querySelector('[name="Interesse"]');f.action=(kOk&&s&&s.value==='Zweefkamp')?kd:hoofd;});}
+if(f){var hoofd=f.action;f.addEventListener('submit',function(){var s=f.querySelector('[name="Interesse"]'),kamp=s&&s.value==='Zweefkamp',su=f.querySelector('[name="_subject"]');f.action=(kOk&&kamp)?kd:hoofd;if(su)su.value=(kamp?'Zweefkamp':(s?s.value:'Infovraag'))+' via KAZM-website';});}
 var kb=document.querySelector('[data-knop="kamp"]');
 if(kb&&!/^https:\/\//.test(((G.kamp||{}).knopLink||'').trim())){kb.addEventListener('click',function(e){
  if(kOk&&kv&&typeof kv.showModal==='function'){e.preventDefault();kv.showModal();kv._t0=Date.now();}
