@@ -15,15 +15,6 @@ window.KAZM = {
   // ---- Algemeen -------------------------------------------------------
   ledenaantal: "±120",
 
-  // ---- Prijzen --------------------------------------------------------
-  prijzen: {
-    jaar:            "2025",      // jaar waarop de kampprijzen slaan
-    kampEenWeek:     "€650",
-    kampTweeWeken:   "€1.200",
-    lidmaatschap:    "",          // bv. "€250"  (leeg = [PRIJS])
-    initiatievlucht: ""           // bv. "€60"   (leeg = [PRIJS])
-  },
-
   // ---- Zweefkamp ------------------------------------------------------
   kamp: {
     week1:          "12 t.e.m. 16 juli 2027",   // verschijnt ook in de kalender
