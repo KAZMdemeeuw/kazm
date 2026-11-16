@@ -66,7 +66,7 @@ window.KAZM = {
 
   // Kampformulier (pop-upvenster + keuze "Zweefkamp" in het algemene formulier)
   // → info@zweefkamp.be. Leeg = de kampknop springt naar het algemene formulier.
-  formulierKamp: "https://formspree.io/f/mdegeyve",
+  formulierKamp: "92e90fb6-5e7d-4cae-9023-a10172df19cd",
 
   // ---- Vliegkalender --------------------------------------------------
   // Eén regel per activiteit. Kopieer een regel om er een toe te voegen,
