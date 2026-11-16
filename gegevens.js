@@ -32,10 +32,13 @@ window.KAZM = {
   },
 
   // ---- Contactgegevens op de pagina ------------------------------------
-  // Let op: wat hier staat, is voor iedereen zichtbaar (ook voor spambots).
-  // Gebruik bij voorkeur een clubadres, bv. info@kazm.be.
+  // E-mail: schrijf het adres VERSTOPT, met [at] in plaats van @,
+  // bv. "info [at] kazm.be". Zo vinden spambots het niet in dit bestand.
+  // Op de site staat een knop "Toon e-mailadres"; pas na een klik
+  // verschijnt het echte, klikbare adres. Gebruik een clubadres, geen privéadres.
+  // Telefoon: is wél voor iedereen leesbaar. Gebruik geen privénummer.
   contact: {
-    email:    "",                 // leeg = [E-MAIL]
+    email:    "",                 // bv. "info [at] kazm.be"  (leeg = [E-MAIL])
     telefoon: ""                  // leeg = [TELEFOON]
   },
 

@@ -427,7 +427,7 @@ function get(p){return p.split('.').reduce(function(o,k){return o==null?o:o[k];}
 document.querySelectorAll('[data-veld]').forEach(function(el){
  var v=get(el.getAttribute('data-veld')); if(v==null||v==='')return; v=String(v);
  var s=el.getAttribute('data-soort');
- if(s==='email'&&v.indexOf('@')>0){el.textContent='';var a=document.createElement('a');a.href='mailto:'+v;a.textContent=v;el.appendChild(a);}
+ if(s==='email'){var adr=v.replace(/\s*\[\s*at\s*\]\s*/gi,'@').replace(/\s*\[\s*(dot|punt)\s*\]\s*/gi,'.').trim();if(adr.indexOf('@')<1)return;el.textContent='';var btn=document.createElement('button');btn.type='button';btn.textContent='Toon e-mailadres';btn.setAttribute('style','font: inherit; font-weight: 600; color: #2B3080; background: none; border: 1px solid #C3C8D6; border-radius: 6px; padding: 10px 14px; cursor: pointer');btn.addEventListener('click',function(){var a=document.createElement('a');a.href='mailto:'+adr;a.textContent=adr;a.style.fontWeight='600';el.replaceChild(a,btn);a.focus();});el.appendChild(btn);}
  else if(s==='telefoon'&&/[0-9]/.test(v)){el.textContent='';var t=document.createElement('a');t.href='tel:'+v.replace(/[^0-9+]/g,'');t.textContent=v;el.appendChild(t);}
  else el.textContent=v;
 });
