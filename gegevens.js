@@ -19,7 +19,7 @@ window.KAZM = {
   kamp: {
     week1:          "12 t.e.m. 16 juli 2027",   // verschijnt ook in de kalender
     week2:          "19 t.e.m. 23 juli 2027",   // verschijnt ook in de kalender
-    inschrijvingen: "Inschrijvingen starten in 2027.",
+    inschrijvingen: "Inschrijvingen starten in 2027. Zet je nu al op de wachtlijst.",
     email:          "info [at] zweefkamp.be",   // contactadres voor het kamp, met [at] i.p.v. @ (leeg = niet getoond)
     // De knop onder "Inschrijven" in de kampsectie:
     knopTekst: "Wil je meer info? →",   // bv. "Schrijf je in →" of "Op de wachtlijst →"
