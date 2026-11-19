@@ -29,7 +29,7 @@ window.KAZM = {
     // Wachtlijst (Fillout-formulier van info@zweefkamp.be).
     // Kamp volzet? Zet wachtlijst op true: de knop wordt dan "Op de wachtlijst →"
     // en opent het wachtlijstformulier. Weer false = gewone knop van hierboven.
-    wachtlijst:     false,
+    wachtlijst:     true,
     wachtlijstLink: "https://forms.fillout.com/t/2b4AtcywxDus"
   },
 
