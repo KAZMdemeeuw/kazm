@@ -23,8 +23,14 @@ window.KAZM = {
     email:          "info [at] zweefkamp.be",   // contactadres voor het kamp, met [at] i.p.v. @ (leeg = niet getoond)
     // De knop onder "Inschrijven" in de kampsectie:
     knopTekst: "Wil je meer info? →",   // bv. "Schrijf je in →" of "Op de wachtlijst →"
-    knopLink:  ""                          // leeg = naar het contactformulier,
+    knopLink:  "",                         // leeg = naar het contactformulier,
                                            // of een volledige link, bv. naar een Google Form
+
+    // Wachtlijst (Fillout-formulier van info@zweefkamp.be).
+    // Kamp volzet? Zet wachtlijst op true: de knop wordt dan "Op de wachtlijst →"
+    // en opent het wachtlijstformulier. Weer false = gewone knop van hierboven.
+    wachtlijst:     false,
+    wachtlijstLink: "https://forms.fillout.com/t/2b4AtcywxDus"
   },
 
   // ---- Contactgegevens op de pagina ------------------------------------

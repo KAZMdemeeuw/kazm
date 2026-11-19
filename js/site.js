@@ -4,6 +4,7 @@
 
 (function(){
 var G=window.KAZM||{};
+if(G.kamp&&G.kamp.wachtlijst===true&&/^https:\/\//.test((G.kamp.wachtlijstLink||'').trim())){G.kamp.knopTekst='Op de wachtlijst →';G.kamp.knopLink=G.kamp.wachtlijstLink.trim();}
 function get(p){return p.split('.').reduce(function(o,k){return o==null?o:o[k];},G);}
 document.querySelectorAll('[data-veld]').forEach(function(el){
  var v=get(el.getAttribute('data-veld')); if(v==null||v==='')return; v=String(v);
